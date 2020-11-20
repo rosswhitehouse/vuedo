@@ -59,5 +59,11 @@ html {
 
 body {
   padding: 50px;
+  background:
+		linear-gradient(
+			90deg,
+			rgba(46,20,74,1) 0%,
+			rgba(15,15,15,1) 100%
+		);
 }
 </style>

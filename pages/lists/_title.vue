@@ -8,7 +8,7 @@
           v-model="newItem"
           size="lg"
         ></b-form-input>
-        <b-button variant="primary" size="lg">
+        <b-button type="submit" variant="primary" size="lg">
           Add New
         </b-button>
       </b-input-group>
@@ -42,7 +42,7 @@
   export default {
     data() {
       return {
-        'title': this.$route.params.title,
+        'title': this.$route.params.title.split('-').join(' '),
         'listItems': [],
         'newItem': null
       }
@@ -84,13 +84,18 @@
 }
 
 fieldset {
-  border: solid 1px silver;
+  border: solid 5px #D2FF01;
   padding: 0 1.25rem 1.25rem;
+  border-radius: 0.3rem;
 }
 
 legend {
   display: inline;
   width: auto;
+  color: #D2FF01;
+  font-weight: bold;
+  padding: 0 20px;
+  text-transform: capitalize;
 }
 
 form {
@@ -99,10 +104,20 @@ form {
 
 .list-group-item {
   border: none;
+  background: transparent;
+  color: #D2FF01;
 }
 
 .list-group-item:hover {
-  background: whitesmoke;
+  background: #631FAA;
+}
+
+button {
+  background: #631FAA;
+}
+
+button:hover, button:visited, button:focus, button:active {
+  background: #2E144A !important;
 }
 
 .custom-checkbox {
